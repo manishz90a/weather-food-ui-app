@@ -35,8 +35,8 @@ import { AuthButtonComponent } from './components/auth-button/auth-button.compon
         allowedList: [
           {
             // Match any request that starts 'https://YOUR_DOMAIN/api/v2/' (note the asterisk)
-            uri: 'https://uuvp37qaz7f5ha22mq46rhalfe0vgihw.lambda-url.ap-south-1.on.aws/get-weather-info',
-            // uri: 'http://localhost:3001/get-weather-info',
+            //uri: 'https://uuvp37qaz7f5ha22mq46rhalfe0vgihw.lambda-url.ap-south-1.on.aws/get-weather-info',
+            uri: 'http://localhost:3001/get-weather-info',
             tokenOptions: {
               // The attached token should target this audience
               audience: 'https://weather-food-api-app',
