@@ -41,7 +41,11 @@ export class AppComponent implements OnInit {
       };
   }
 
-  constructor(private http: HttpClient, @Inject(DOCUMENT) private document: Document, private cd: ChangeDetectorRef){
+  constructor(
+    private http: HttpClient,
+    @Inject(DOCUMENT) private document: Document,
+    private cd: ChangeDetectorRef
+    ){
     this.window = this.document.defaultView;
   }
 
@@ -52,7 +56,8 @@ export class AppComponent implements OnInit {
   getWeatherInfo () {
     if (this.city) {
         this.loading = true;
-         this.http.get('https://uuvp37qaz7f5ha22mq46rhalfe0vgihw.lambda-url.ap-south-1.on.aws/get_weather_info?city='+ this.city)
+         this.http.get('https://uuvp37qaz7f5ha22mq46rhalfe0vgihw.lambda-url.ap-south-1.on.aws/get-weather-info?city='+ this.city)
+         // this.http.get('http://localhost:3001/get-weather-info?city='+ this.city)
          .pipe(take(1)).subscribe(data => {
           this.weatherData = data;
           this.city = '';

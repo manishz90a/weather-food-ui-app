@@ -1,17 +1,23 @@
 .weather-container {
     margin-top: 3%;
     margin-left: 8%;
+    margin-right: 5%;
 
-    .weather-inputs {
+    .header {
         display: flex;
+        justify-content: space-between;
 
-        .weather-input-box {
-            width: 30rem;
-            border-radius: 12px;
-        }
-
-        .search-icon {
-            margin-left: 5px;
+        .weather-inputs {
+            display: flex;
+    
+            .weather-input-box {
+                width: 30rem;
+                border-radius: 12px;
+            }
+    
+            .search-icon {
+                margin-left: 5px;
+            }
         }
     }
 }

@@ -1,12 +1,15 @@
 <div class="weather-container">
-  <div class="weather-inputs">
-    <input type="text" class="weather-input-box" placeholder="Type-in a city name..." [(ngModel)]="city" autofocus>
-  <a class="search-icon" href="#" (click)="getWeatherInfo()">
-    <span class='material-icons'>search</span>
-  </a>
-  <a href="#" (click)="speechRecoginationStart()">
-    <span class="material-icons yellow-color">mic </span>
-  </a>
+  <div class="header">
+    <div class="weather-inputs">
+      <input type="text" class="weather-input-box" placeholder="Type-in a city name..." [(ngModel)]="city" autofocus>
+    <a class="search-icon" href="#" (click)="getWeatherInfo()">
+      <span class='material-icons'>search</span>
+    </a>
+    <a href="#" (click)="speechRecoginationStart()">
+      <span class="material-icons yellow-color">mic </span>
+    </a>
+    </div>
+    <app-auth-button class="auth"></app-auth-button>
   </div>
   <div *ngIf="loading"></div>
   <div *ngIf="weatherData?.message && loading">
